@@ -1,0 +1,42 @@
+:host {
+    display: block;
+    margin-block: 24px;
+    padding-inline: 72px;
+  }
+  
+  input {
+    display: block;
+    margin-inline: auto;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: #fff;
+    transition: border 0.25s ease, box-shadow 0.25s ease;
+  
+    &:focus {
+      border-color: #5b9df9;
+      box-shadow: 0 0 0 3px rgba(91, 157, 249, 0.2);
+      outline: none;
+    }
+  
+    &::placeholder {
+      color: #aaa;
+      opacity: 1;
+    }
+  }
+  
+  p.empty {
+    margin-block: 30px;
+    font-size: 2rem;
+  }
+  
+  
+  
+  
+  
+  

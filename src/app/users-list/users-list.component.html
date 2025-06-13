@@ -1,0 +1,35 @@
+<input type="text" placeholder="Enter value..." [(ngModel)]="searchValue" />
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Telephone</td>
+      <td>Email</td>
+      <td>Company Name</td>
+      <td>Posts</td>
+      <td>TODO</td>
+    </tr>
+  </thead>
+  <tbody>
+    @for ((user of users() | filterUsers: searchValue); track user.id) {
+    <tr>
+      <td>{{ user.name }}</td>
+      <td>{{ user.phone }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.company.name }}</td>
+      <td>
+        <a class="link-btn" routerLink="/posts/{{user.id}}">
+          <span>Posts </span>
+        </a>
+      </td>
+      <td>
+        <a class="link-btn" routerLink="/todos/{{user.id}}">
+          <span>Todo List</span>
+        </a>
+      </td>
+    </tr>
+    } @empty {
+    <p class="empty">No Users Found...</p>
+    }
+  </tbody>
+</table>
