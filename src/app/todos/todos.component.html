@@ -1,0 +1,17 @@
+<table>
+    <thead>
+      <tr>
+        <th>User Name</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (todo of todos(); track todo.id) {
+      <tr [class.completed]="todo.completed">
+        <td>{{ getUserName(todo.userId) }}</td>
+        <td>{{ todo.title }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  
