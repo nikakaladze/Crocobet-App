@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Header } from './header/header';
+import { Header } from './header/header.component';
 import { SideMenu } from './side-menu/side-menu';
-import { Footer } from "./footer/footer";
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, SideMenu, Footer],
-  templateUrl: './app.html',
+  imports: [RouterOutlet, Header, SideMenu, FooterComponent],
+  templateUrl: './app.component.html',
   standalone: true,
-  styleUrl: './app.scss',
+  styleUrl: './app.component.scss',
 })
 export class App { }
