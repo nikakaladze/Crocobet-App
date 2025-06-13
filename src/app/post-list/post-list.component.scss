@@ -73,3 +73,27 @@
     }
   }
   
+
+  ///---responsive---///
+  
+  @media(max-width:1024px){
+    :host{
+      padding-block: 30px;
+      padding-inline: 30px;
+      font-size: 14px;
+
+    }
+   
+  }
+
+
+  @media(max-width:680px){
+    :host{
+      max-width: fit-content;
+      font-size: 12px;
+      padding-inline: 10px;
+      
+
+    }
+    
+  }  

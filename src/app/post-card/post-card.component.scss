@@ -33,3 +33,9 @@
   }
   
   
+  @media(max-width:1024px){
+    .card-container{
+      max-width: 400px;
+      font-size: 14x;
+    }
+  };

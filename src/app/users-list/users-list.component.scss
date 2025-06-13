@@ -34,9 +34,52 @@
     margin-block: 30px;
     font-size: 2rem;
   }
+
+
+  ///---responsive---////
   
   
+  @media(max-width:1024px){
+    :host{
+      padding-inline: 20px;
+      padding-block: 30px;
+      font-size: 14px;
+
+    }
+    th,td{
+      padding: 6px;
+
+    }
+  }
+
+
+  @media(max-width:680px){
+    :host{
+      max-width: fit-content;
+      font-size: 12px;
+      
+
+    }
+    :host{
+      padding-inline: 10px;
+      font-size: 12px;
+    }
+  }  
+
   
+
   
+  @media(max-width:480px){
+    :host{
+      max-width: fit-content;
+      font-size: 8px;
+      padding-inline: 0;
+      padding-block: 0;
+      
+
+    }
+    
+  }  
+
   
-  
+
