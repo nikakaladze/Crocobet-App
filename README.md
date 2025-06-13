@@ -1,59 +1,68 @@
-# CrocobetApp
+# Angular 19 Users & Posts App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
+This is an Angular 19 application that meets all the requirements of the assignment.  
+It fetches data from [jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com/), provides a modern, responsive UI, and works on all major browsers.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📌 Features
 
-```bash
-ng serve
-```
+- **Header**
+  - Left: Site title (links to the home page)
+  - Right: Live date and time
+- **Navigation (Side-menu)**
+  - Displayed on the left side
+  - Contains two buttons: **Users** and **Posts**
+- **Users Page**
+  - Full user list in a table (Name, Surname, Phone, Email, Company Name)
+  - **Search field:** Search by name, surname, or email
+  - Each user has two buttons:
+    - **Posts** – with a hover animation, navigates to the selected user's posts page
+    - **ToDo** – opens the user's todo list, where completed tasks are highlighted in green
+- **Posts Page**
+  - Displays all posts for the selected user as cards (Title, Description, Author)
+  - Each post has a **Details** button – opens a popup with the full post title and description
+- **Footer**
+  - Fixed at the bottom and centered on all screen sizes
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## ⚙️ Technical Details
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **API:** Fetches users and posts from [jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com/)
+- **Responsive Design:**
+  - *1024px and above*: content is centered and uses 50% of the width
+  - *Below 1024px*: content uses 80% of the width
+- **Cross-browser compatibility:** Works in all modern browsers
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🚀 Getting Started
 
-```bash
-ng generate --help
-```
+1. **Install dependencies:**
+    ```bash
+    npm install
+    ```
+2. **Start the application:**
+    ```bash
+    ng serve
+    ```
+3. Open your browser and go to: [http://localhost:4200](http://localhost:4200)
 
-## Building
+---
 
-To build the project run:
+## 🌟 Additional Features
 
-```bash
-ng build
-```
+- Posts are filtered to show only those by the selected user
+- Popup dialog for viewing post details
+- In the todo list, completed tasks are highlighted in green
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🖥 Layout Responsiveness
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- **Standard monitors (1024px+):** Content is centered, 50% width
+- **Mobile/tablet:** Content is centered, 80% width
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
