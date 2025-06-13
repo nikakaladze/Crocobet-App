@@ -1,0 +1,32 @@
+<table>
+    <thead>
+      <tr>
+        <td>User Name</td>
+        <td>Post Name</td>
+        <td>Post Action</td>
+      </tr>
+    </thead>
+    <tbody>
+      @for (post of posts(); track post.id) {
+      <tr>
+        <td>{{ getUserName(post.userId) }}</td>
+        <td>{{ post.title }}</td>
+        <td>
+          <button
+            (click)="openFullPost(post); dialog.showModal()"
+            class="link-btn"
+          >
+            <span> Details </span>
+          </button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  
+  <dialog #dialog>
+    <p>{{ activePost().title}}</p>
+    <p>{{ activePost().body}}</p>
+    <button (click)="dialog.close()">Close</button>
+  </dialog>
+  

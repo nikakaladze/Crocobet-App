@@ -1,0 +1,75 @@
+:host {
+    display: block;
+    margin-block: 24px;
+    padding-inline: 72px;
+  }
+  
+  td:last-child {
+    text-align: center;
+  }
+  
+  dialog {
+    max-width: 500px;
+    padding: 24px 32px;
+    border: none;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+    margin: unset;
+  
+    &::backdrop {
+      position: fixed;
+      display: block;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+    }
+  }
+  
+  dialog p {
+    margin: 0 0 12px;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.4;
+  
+    &:first-child {
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+  }
+  
+  dialog button {
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-inline: auto;
+    display: block;
+    margin-top: 16px;
+    padding: 10px 16px;
+  }
+  
+  dialog button:hover {
+    background-color: #0056b3;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -45%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
